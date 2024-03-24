@@ -1,0 +1,49 @@
+Required:
+station model which have fuel, cargo and people capacity
+when new vehicle arrives it is needed to check
+if the possibility of station in every type of capacity is not exhausted
+and the station could to accept the vehicle
+buses and trucks arrive in random order and contain random load and people volume
+every time when vehicle arrives:
+ - check if station capacities are not exhausted
+    - fuel capacity
+    - people capacity
+    - cargo capacity
+  then
+ - truck: unload cargo
+          increase cargo volume at the station
+ - bus: people leave the bus
+        increase people value at the station
+every time when vehicle leave the station :
+  - truck: take the fuel to full tank
+           take the cargo in random volume but not greater than its capacity
+  - bus: take the fuel to full tank
+           take people in random value but not greater than its capacity
+
+
+station:
+fuel capacity
+fuel volume available
+cargo capacity
+cargo volume available
+people capacity
+people volume available
+
+abstract vehicle:
+- brand?:
+  - tank capacity
+  - fuel volume
+- people
+- add fuel
+- get fuel
+
+interface Changes? find functional interface?
+ - unload (people, load)
+ - load (people, load)
+
+v/i ----> *truck*:
+  - load capacity
+  - goods volume
+v/i ----> *bus*
+  - people capacity
+  - people volume
