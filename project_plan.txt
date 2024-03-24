@@ -1,10 +1,11 @@
 Required:
-station model which have fuel, cargo and people capacity
-when new vehicle arrives it is needed to check
-if the possibility of station in every type of capacity is not exhausted
-and the station could to accept the vehicle
-buses and trucks arrive in random order and contain random load and people volume
-every time when vehicle arrives:
+1) station model which has fuel, cargo and people capacity
+2) when new vehicle arrives it is needed to check if the possibility of station for every type of capacity is not exhausted
+and the station could accept the vehicle
+3) buses and trucks arrive in random order and contain random load volume and people value
+
+Needed:
+1) every time when vehicle arrives:
  - check if station capacities are not exhausted
     - fuel capacity
     - people capacity
@@ -14,36 +15,39 @@ every time when vehicle arrives:
           increase cargo volume at the station
  - bus: people leave the bus
         increase people value at the station
-every time when vehicle leave the station :
-  - truck: take the fuel to full tank
+
+2) every time when vehicle leave the station :
+  - truck: fill the fuel to full tank from station supply
            take the cargo in random volume but not greater than its capacity
-  - bus: take the fuel to full tank
+  - bus: fill the fuel to full tank from station supply
            take people in random value but not greater than its capacity
 
+Possible classes:
+1) station:
+   fuel capacity
+   fuel volume available
+   cargo capacity
+   cargo volume available
+   people capacity
+   people volume available
 
-station:
-fuel capacity
-fuel volume available
-cargo capacity
-cargo volume available
-people capacity
-people volume available
+2) abstract vehicle:
+   brand?:
+   tank capacity
+   fuel volume
+   people value (driver?)
+   add fuel
+   get fuel
+   ...
 
-abstract vehicle:
-- brand?:
-  - tank capacity
-  - fuel volume
-- people
-- add fuel
-- get fuel
+3) from vehicle --> truck:
+   load capacity
+   goods volume
+   ...
 
-interface Changes? find functional interface?
- - unload (people, load)
- - load (people, load)
+4) from vehicle --> bus
+   people capacity
+   people value
+   ...
 
-v/i ----> *truck*:
-  - load capacity
-  - goods volume
-v/i ----> *bus*
-  - people capacity
-  - people volume
+
