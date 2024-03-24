@@ -16,7 +16,7 @@ Needed:
  - bus: people leave the bus
         increase people value at the station
 
-2) every time when vehicle leave the station :
+2) every time when vehicle leaves the station :
   - truck: fill the fuel to full tank from station supply
            take the cargo in random volume but not greater than its capacity
   - bus: fill the fuel to full tank from station supply
