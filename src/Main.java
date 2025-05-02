@@ -21,7 +21,7 @@ public class Main {
             } else
                 departure(station);
         }
-        System.out.println("Station capacities are exhausted or there are no available vehicles on station");
+        System.out.println("The station has no capacities to accept next vehicle or all vehicles on station are in use");
         System.out.println("Station parameters after finish:" + station);
 
     }

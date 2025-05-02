@@ -86,8 +86,7 @@ public class Station {
             vehicles.add(v);
             printVehicle("+", v);
         } else
-            System.out.println("Vehicle is skipped due to station capacities unavailability. Type of vehicle: "
-                    + v.getClass().getSimpleName() + ", event: arrival");
+            skippedVehicleMessage("arrival", v);
     }
 
     public void departure(Vehicle v) {
@@ -96,13 +95,17 @@ public class Station {
             printVehicle("-", v);
             vehicles.remove(v);
         } else
-            System.out.println("Vehicle is skipped due to station capacities unavailability. Type of vehicle: "
-                    + v.getClass().getSimpleName() + ", event: arrival");
+            skippedVehicleMessage("departure", v);
     }
 
     public void printVehicle(String s, Vehicle v) {
         System.out.printf("%s | %s | cargo on station: %10.2f | people on station: %4d | fuel available on station: %7.2f |%n",
                 s, v, getCargoVolume(), getPeopleVolume(), getFuelVolume());
+    }
+
+    public void skippedVehicleMessage(String event, Vehicle v){
+        System.out.printf("  | %-5s | the current vehicle was skipped due to lack of available capacity at the station. Type of event: %s%n",
+                v.getClass().getSimpleName(), event);
     }
 
 }
