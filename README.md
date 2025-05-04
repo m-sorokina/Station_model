@@ -1,4 +1,4 @@
-**Short Description:**  
+**Short description:**  
 This project simulates a station model that can handle two types of vehicles:
  - Truck
  - Bus
