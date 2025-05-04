@@ -11,7 +11,7 @@ Vehicles and events are added randomly during the simulation.
 If the station has no available capacity to accept a given vehicle, that vehicle is skipped.  
 The program stops when all station capacities are exhausted or all vehicles are currently in use.  
 
-**Sample of console output**  
+Console output  
 
 ```
 + | Truck | tank capacity: 500.00 | fuel available: 119.67 | cargo capacity:  25000.00 | cargo on board: 16492.81 | cargo on station:  366828.65 | people on station:  928 | fuel available on station:  128.01 |
