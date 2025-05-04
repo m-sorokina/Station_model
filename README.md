@@ -1,5 +1,5 @@
 **Short Description:**  
-This application simulates a station model that can handle two types of vehicles:
+This project simulates a station model that can handle two types of vehicles:
  - Truck
  - Bus
   
